@@ -19,7 +19,7 @@ Visit: https://Kriti-kk.github.io
 
 ## How to Update
 - To make further changes:
-    git add .
-    git commit -m "Describe your changes"
-    git push origin main
+    - git add .
+    - git commit -m "Describe your changes"
+    - git push origin main
 
