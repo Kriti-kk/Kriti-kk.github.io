@@ -1,0 +1,127 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffe6f0; /* Soft pink background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#todo-app {
+  background: #ffb6c1; /* Light pink */
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4); /* Pink shadow */
+  width: 360px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#todo-app h2 {
+  color: #800040; /* Dark magenta */
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+#input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+#task-input {
+  width: calc(100% - 92px);
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 2px solid #e5709f;
+  border-radius: 12px 0 0 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+/*
+#task-input:focus {
+  border-color: #ff3377;
+}
+*/
+#add-btn {
+  width: 72px;
+  padding: 14px 0;
+  background: #e5709f ; /* Medium pink */
+  border: 2px solid #e5709f;
+  color: rgb(75, 3, 3);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#add-btn:hover {
+  background: #e62e70;
+}
+
+ul#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.task-item {
+  background: #ffb6c1;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #800040;
+}
+
+li.task-item span {
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: left;
+}
+
+li.task-item span.completed {
+  text-decoration: line-through;
+  color: #cc6699;
+}
+
+button.remove-btn {
+  background: #ffe6f0;
+  border: 3px solid #ffb6c1; /* Increased border width */
+  padding: 6px 10px; /* Added vertical and horizontal padding for more border visibility */
+  border-radius: 16px; /* Slightly larger radius for emphasis */
+  color: rgb(75, 3, 3);
+  font-weight: bold;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+button.remove-btn:hover {
+  background: #96204e;
+}
+
+@media (max-width: 480px) {
+  #todo-app {
+    width: 90vw; /* Use viewport width units for flexible width */
+    padding: 20px;
+    box-shadow: none; /* Remove shadow on very small screens */
+  }
+
+  #input-row {
+    flex-direction: column;
+  }
+
+  #task-input {
+    width: 100%; /* Full width on small screens */
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+   #add-btn {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
